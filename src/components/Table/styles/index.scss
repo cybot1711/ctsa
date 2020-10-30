@@ -1,0 +1,108 @@
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid #34495e;
+  color: #fff;
+  border-radius: 0.4em;
+
+  thead {
+    background: #34495e;
+  }
+
+  tr {
+    padding: 0.35em;
+    transition: all 0.4s ease-in-out;
+  }
+
+  tbody > tr:hover {
+    background-color: #282c34;
+    color: #fafafa;
+    overflow-x: auto;
+  }
+
+  th,
+  td {
+    padding: 0.625em;
+    text-align: left;
+    vertical-align: baseline;
+    border: 1px solid #34495e;
+    word-break: break-all;
+  }
+
+  th {
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  @media screen and (max-width: 600px) {
+    border: 0;
+    caption {
+      font-size: 1.3em;
+    }
+
+    thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: 0.625em;
+    }
+
+    td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: 0.8em;
+      text-align: right;
+    }
+
+    td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    td:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+.scroll-container {
+  overflow: scroll;
+  height: 70vh;
+  width: auto;
+  overflow-x: hidden;
+  border: 1px solid #34495e;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+.scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Handle */
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #34495e;
+}
+/* Handle on hover */
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: rgb(160, 139, 139);
+}

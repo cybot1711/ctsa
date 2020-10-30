@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+  }
+
+  > * {
+    flex: 1;
+
+    ul {
+      list-style-type: none;
+      color: #34495e;
+      font-weight: bold;
+      font-size: 30px;
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      @media screen and (min-width: 600px) {
+        max-width: 45vw;
+      }
+    }
+  }
+}
+
+.white-text {
+  font-weight: bold;
+  font-size: 30px;
+  color: #fafafa;
+}
+
+.link {
+  color: lightgreen;
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 40px;
+}
