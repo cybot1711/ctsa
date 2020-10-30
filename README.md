@@ -2,7 +2,7 @@
 ![start](https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif)  
 
 
-Find the app running [here](http://104.248.167.244/).  
+Find the app running [here](http://104.248.167.244:8080/).  
 This application scaffold used is [CRA](https://create-react-app.dev/) (Crate React APP).
 
 This project makes of the following dev config:
