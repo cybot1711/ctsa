@@ -1,4 +1,5 @@
 # Overview
+![start](https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif)
 
 This application scaffold used is [CRA](https://create-react-app.dev/) (Crate React APP).
 
@@ -19,12 +20,18 @@ Adding a custom config for formatting and linting lays the groundwork for consis
 I tried to type everything as far as I could. Adds robust type checking as a standard. Typescript has also become the 
 de facto industry standard.  
 
-I must mention that the eslint config is a bit stricter than needs to be but this is something that can be debated.
+I must mention that the eslint config is a bit stricter than needs to be but this is something that can be debated.  
+
+I felt it necessary to establish patterns for data fetching and updating state. This also leads to more decoupling
+and enables ease of test. Also, notice that on the app page and 
+user fact pages the data fetching methods differ. We could have gotten away with something like 
+[SWR](https://swr.vercel.app/) completely negating the need for a thunk. It depends on the requirement after all. Could 
+even have used Context API. In this case total overkill yet necessary.
 
 A very basic storybook setup has been added to the repo to enable building living style guides as the project progresses.
 
 ## Getting started
-![start](http://gph.is/2prM2JC)
+![start](https://media.giphy.com/media/3oKIPtjElfqwMOTbH2/giphy.gif)
 
 After cloning the repo run:
 
