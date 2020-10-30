@@ -1,6 +1,8 @@
 # Overview
-![start](https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif)
+![start](https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif)  
 
+
+Find the app running [here](http://104.248.167.244/).  
 This application scaffold used is [CRA](https://create-react-app.dev/) (Crate React APP).
 
 This project makes of the following dev config:
@@ -29,6 +31,11 @@ user fact pages the data fetching methods differ. We could have gotten away with
 even have used Context API. In this case total overkill yet necessary.
 
 A very basic storybook setup has been added to the repo to enable building living style guides as the project progresses.
+
+## Note on functionality.
+Searching should default the user to the first page and change pagination according the amount of results.  
+I refrained from displaying a message for no results and defaulted to the full list as this is what happens
+for a live search. It would make more sense to display such a message when search is triggered by return or button click. 
 
 ## Getting started
 ![start](https://media.giphy.com/media/3oKIPtjElfqwMOTbH2/giphy.gif)
@@ -59,5 +66,7 @@ After cloning the repo run:
 - Help your team succeed at all costs.
 
 ### Notes
-There will be one error visible in the console, and it comes from tilt.js. A good opportunity to contribute to that repo.  
+There will be one error visible in the console, and it comes from tilt.js. A good opportunity to contribute to that repo. 
+Tilt also shows some warnings when running tests (Clearly they have not paid tribute to the compiler gods). 
 My design skills are average.
+

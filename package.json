@@ -40,13 +40,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "yarn run test-all",
       "pre-push": "yarn run test-all"
     }
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
-      "yarn run test-all"
+      "yarn test-all"
     ]
   },
   "eslintConfig": {

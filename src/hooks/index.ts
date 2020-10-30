@@ -50,18 +50,16 @@ export const useGetFactData = (): State => {
 
 export const useFetchAvatarData = (): any => {
   const { id } = useParams<{ id: string }>()
-  // eslint-disable-next-line no-console
-  console.log(id)
   const fact = useSelector<State, CatFact | undefined>((state) =>
     userSelector(state, id)
   )
   const [response, setResponse] = useState<string | null>(null)
   const [error, setError] = useState(null)
-  const [isLoading, setIsLoading] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     const fetchData = async () => {
-      setIsLoading(true)
+      setLoading(true)
       try {
         const res = await fetchAvatarData(
           fact && fact.user
@@ -69,12 +67,12 @@ export const useFetchAvatarData = (): any => {
             : ''
         )
         setResponse(URL.createObjectURL(res))
-        setIsLoading(false)
+        setLoading(false)
       } catch (error) {
         setError(error)
       }
     }
     fetchData()
   }, [fact])
-  return { response, error, isLoading, data: fact }
+  return { response, error, loading, data: fact }
 }
